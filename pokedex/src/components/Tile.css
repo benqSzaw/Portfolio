@@ -1,0 +1,56 @@
+.tile_main {
+  height: 235px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  border: solid black 1px;
+  border-radius: 10px;
+
+  -webkit-box-shadow: 4px 4px 12px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 4px 4px 12px 0px rgba(66, 68, 90, 1);
+  box-shadow: 4px 4px 12px 0px rgba(66, 68, 90, 1);
+
+  background-color: whitesmoke;
+}
+
+.tile_headear {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tile_id {
+  margin-left: 10px;
+}
+
+.tile_name {
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+.tile_img {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 5px;
+}
+
+.tile_types_container {
+  display: flex;
+  justify-content: center;
+}
+
+.tile_type {
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+
+  width: 35%;
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
+  border-radius: 5px;
+
+  text-align: center;
+  font-size: small;
+  font-weight: 400;
+}

@@ -1,0 +1,22 @@
+.button_type {
+  font-family: "Flexo-Medium", arial, sans-serif;
+  font-size: 20px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  padding: 0.1em;
+  margin: 0.2em;
+  border-radius: 10px;
+  min-width: 100px;
+  max-width: 200px;
+  flex: 0 0 calc(16.66% - 20px);
+}
+
+.button_type_active {
+  background-color: gray;
+
+  -webkit-box-shadow: inset 0px 0px 0px 1px #f00;
+  -moz-box-shadow: inset 0px 0px 0px 1px #f00;
+  box-shadow: inset 0px 0px 0px 1px #f00;
+}
