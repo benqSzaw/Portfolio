@@ -10,10 +10,11 @@ const PokeStats = ({ id, onClickBackground }) => {
   useEffect(() => {
     setDisplay(
       pokedexJSON.filter((x) => {
-        return x.id == id;
+        return "" + x.id === id;
       })
     );
-  }, []);
+  }, [id]);
+
   if (display == null) return;
 
   const backgroundHandler = () => {
@@ -25,9 +26,8 @@ const PokeStats = ({ id, onClickBackground }) => {
       <div
         className="background_stats"
         style={{
-          background: `linear-gradient(180deg, ${TypeColor(
-            display[0].type[0]
-          )}, ${
+          background: `linear-gradient(180deg, ${TypeColor(display[0].type[0])},
+          ${
             display[0].type[1]
               ? TypeColor(display[0].type[1])
               : TypeColor(display[0].type[0])
@@ -47,21 +47,13 @@ const PokeStats = ({ id, onClickBackground }) => {
           <div className="stats_name_2">chi. {display[0].name.chinese}</div>
           <div className="stats_name_2">fra. {display[0].name.french}</div>
 
-          <div
-            className="stats_type_div"
-            style={{
+          <div className="stats_type_div" style={{
               justifyContent: display[0].type[1] ? "space-between" : "center",
-            }}
-          >
+          }}>
             {display[0].type.map((e) => {
               return (
-                <div
-                  className="stats_type"
-                  style={{ backgroundColor: TypeColor(e) }}
-                  key={e}
-                >
-                  {" "}
-                  {e}{" "}
+                <div className="stats_type" style={{ backgroundColor: TypeColor(e) }} key={e} >
+                  {e}
                 </div>
               );
             })}
@@ -84,11 +76,9 @@ const PokeStats = ({ id, onClickBackground }) => {
           </div>
 
           <div>
-            <img className="stats_img"
-              src={require(`${path}`)}
-              alt={"Pokemon"}
-            />
+            <img className="stats_img" src={require(`${path}`)} alt={"Pokemon"}/>
           </div>
+          
         </div>
       </div>
     </div>
